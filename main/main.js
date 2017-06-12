@@ -7,20 +7,21 @@ module.exports = function main(inputs) {
     var index=new Array();
     for (var i=0;i<items.length;i++)
         num[i]=0;
-    for (i=0;i<inputs.length;i++)
+     for (i=0;i<inputs.length;i++)
     {
         for (var j=0;j<stuff.length;j++)
         {
-            if (inputs[i]==stuff[j].barcode)
+            if (inputs[i]==items[j].barcode)
                 break;
         }
         stuff[j]=inputs[i];
         num[j]++;
-        for (var i=0;i<items.length;i++)
+        for (var k=0;k<items.length;k++)
         {
-            if (stuff[j]==items[i])
-                index[j]=i;
+            if (stuff[j]==items[k].barcode)
+                index[j]=k;
         }
+
     }
     var total=0;
     var single;
