@@ -27,7 +27,7 @@ module.exports = function main(inputs) {
     var ret="***<没钱赚商店>购物清单***\n";
     for (i=0;i<stuff.length;i++)
     {
-        single=items.[index[i]].price*num[i];
+        single=items[index[i]].price*num[i];
         total+=single;
         ret+="名称："+items[index[i]].name+"，数量："+num[i]+items[index[i]].unit+"，单价："+items[index[i]].price+"(元)，小计："+single+"(元)\n";
     }
