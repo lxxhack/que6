@@ -32,6 +32,6 @@ module.exports = function main(inputs) {
         total+=single;
         ret+="名称："+items[index[i]].name+"，数量："+num[i]+items[index[i]].unit+"，单价："+items[index[i]].price.toFixed(2)+"(元)，小计："+single.toFixed(2)+"(元)\n";
     }
-    ret+="----------------------\n总计："+total+"(元)\n"+"**********************\n";
+    ret+="----------------------\n总计："+total.toFixed(0)+"(元)\n"+"**********************\n";
     return ret;
 };
